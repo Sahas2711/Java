@@ -71,20 +71,20 @@ public:
 int main() {
     string role;
     double baseSalary;
-String Name;
+    string Name;
     int userExperience;
-    cout<<"Enter your name";
+    cout<<"Enter your name. :- ";
     getline(cin,Name);
-    cout << "Enter the role" << endl;
     cout << "Enter One if you are HOD, Dean, Principal" << endl;
     cout << "Enter Two if you are Senior Faculty" << endl;
     cout << "Enter Three if you are Junior Faculty" << endl;
     cout << "Enter Four if you are Clerk, Lab Assistant" << endl;
+    cout << "Enter the role :- " << endl;
     getline(cin, role);
 
-    cout << "Enter the base salary : ";
+    cout << "Enter the base salary :-  ";
     cin >> baseSalary;
-    cout << "Enter the years of experience : ";
+    cout << "Enter the years of experience :- ";
     cin >> userExperience;
 
     Employee* employee = nullptr;
