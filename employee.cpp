@@ -92,20 +92,20 @@ String Name;
     if (role == "One" || role == "one" || role == "ONE") {
         employee = new One(role, baseSalary, userExperience);
             cout <<Name <<" is working as HOD/Dean/Principal with Salary of " << employee->calculateSalary()<<endl;
-            cout<< " and you are paying tax of  " << employee->calculateTax() << endl;
+            cout<<Name<<" have to pay tax of   " << employee->calculateTax() << endl;
 
     } else if (role == "Two" || role == "TWO" || role == "two") {
         employee = new Two(role, baseSalary, userExperience);
       cout<< Name<<" is working as Senior Faculty with Salary of " << employee->calculateSalary()  <<endl;
-      cout<< " and you are paying tax of  " << employee->calculateTax() << endl;
+      cout<<Name <<" have to pay tax of   " << employee->calculateTax() << endl;
     } else if (role == "Three" || role=="THREE" || role=="three") {
         employee = new Three(role, baseSalary, userExperience);
          cout<<Name <<" is working as Junior Faculty with Salary of " << employee->calculateSalary()<<endl;
-         cout<< " and you are paying tax of  " << employee->calculateTax() << endl;
+         cout<< Name<<" have to pay tax of   " << employee->calculateTax() << endl;
     } else if (role == "Four" || role=="FOUR" || role=="four") {
         employee = new Four(role, baseSalary, userExperience);
          cout<<Name  <<" is working as Clerk/Lab Assistant with Salary of "<< employee->calculateSalary()<<endl;
-         cout<< " and you are paying tax of  " << employee->calculateTax() << endl;
+         cout<<Name<< " have to pay tax of " << employee->calculateTax() << endl;
     } else {
         cout << "Invalid role provided." << endl;
         return 1;
