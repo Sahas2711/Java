@@ -71,13 +71,15 @@ public:
 int main() {
     string role;
     double baseSalary;
+String Name;
     int userExperience;
-
+    cout<<"Enter your name";
+    getline(cin,Name);
     cout << "Enter the role" << endl;
-    cout << "Enter One for HOD, Dean, Principal" << endl;
-    cout << "Enter Two for Senior Faculty" << endl;
-    cout << "Enter Three for Junior Faculty" << endl;
-    cout << "Enter Four for Clerk, Lab Assistant" << endl;
+    cout << "Enter One if you are HOD, Dean, Principal" << endl;
+    cout << "Enter Two if you are Senior Faculty" << endl;
+    cout << "Enter Three if you are Junior Faculty" << endl;
+    cout << "Enter Four if you are Clerk, Lab Assistant" << endl;
     getline(cin, role);
 
     cout << "Enter the base salary : ";
@@ -89,20 +91,20 @@ int main() {
 
     if (role == "One" || role == "one" || role == "ONE") {
         employee = new One(role, baseSalary, userExperience);
-            cout <<"You are working as HOD/Dean/Principal with Salary of " << employee->calculateSalary()<<endl;
+            cout <<Name <<" is working as HOD/Dean/Principal with Salary of " << employee->calculateSalary()<<endl;
             cout<< " and you are paying tax of  " << employee->calculateTax() << endl;
 
     } else if (role == "Two" || role == "TWO" || role == "two") {
         employee = new Two(role, baseSalary, userExperience);
-      cout <<"You are working as Senior Faculty with Salary of " << employee->calculateSalary()  <<endl;
+      cout<< Name<<" is working as Senior Faculty with Salary of " << employee->calculateSalary()  <<endl;
       cout<< " and you are paying tax of  " << employee->calculateTax() << endl;
     } else if (role == "Three" || role=="THREE" || role=="three") {
         employee = new Three(role, baseSalary, userExperience);
-         cout <<"You are working as Junior Faculty with Salary of " << employee->calculateSalary()<<endl;
+         cout<<Name <<" is working as Junior Faculty with Salary of " << employee->calculateSalary()<<endl;
          cout<< " and you are paying tax of  " << employee->calculateTax() << endl;
     } else if (role == "Four" || role=="FOUR" || role=="four") {
         employee = new Four(role, baseSalary, userExperience);
-         cout <<"You are working as Clerk/Lab Assistant with Salary of "<< employee->calculateSalary()<<endl;
+         cout<<Name  <<" is working as Clerk/Lab Assistant with Salary of "<< employee->calculateSalary()<<endl;
          cout<< " and you are paying tax of  " << employee->calculateTax() << endl;
     } else {
         cout << "Invalid role provided." << endl;
